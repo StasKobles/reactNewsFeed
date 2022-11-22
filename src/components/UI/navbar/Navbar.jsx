@@ -13,10 +13,10 @@ const Navbar = () => {
   const { isAuth, setIsAuth } = useContext(AuthContext);
   return (
     <div className="navbar">
-      <MyButton onClick={logout}>Выйти</MyButton>
+      <MyButton onClick={logout}>Exit</MyButton>
       <div className="navbar__links">
-        <Link to="/about">О сайте</Link>
-        <Link to="/posts">Посты</Link>
+        <Link to="/about">About</Link>
+        <Link to="/posts">Posts</Link>
       </div>
     </div>
   );
