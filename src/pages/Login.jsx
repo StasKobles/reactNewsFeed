@@ -12,11 +12,11 @@ const Login = () => {
   };
   return (
     <div>
-      <h1>Страница для логина</h1>
+      <h1>Authenticate page</h1>
       <form onSubmit={login}>
-        <MyInput type="text" placeholder="Введите логин" />
-        <MyInput type="password" placeholder="Введите пароль" />
-        <MyButton>Войти</MyButton>
+        <MyInput type="text" placeholder="Enter login" />
+        <MyInput type="password" placeholder="Enter password" />
+        <MyButton>Login</MyButton>
       </form>
     </div>
   );

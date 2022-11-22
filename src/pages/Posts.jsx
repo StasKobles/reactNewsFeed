@@ -56,29 +56,29 @@ function Posts() {
   return (
     <div className="App">
       <MyButton style={{ marginTop: 30 }} onClick={() => setModal(true)}>
-        Создать пользователя
+        Create post
       </MyButton>
       <MyModal visible={modal} setVisible={setModal}>
         <PostForm create={createPost} />
       </MyModal>
       <hr style={{ margin: "15px 0" }} />
       <PostFilter filter={filter} setFilter={setFilter} />
-      {postError && <h1>Произошла ошибка ${postError}</h1>}
+      {postError && <h1>Error: ${postError}</h1>}
       <MySelect
         value={limit}
         onChange={(value) => setLimit(value)}
-        defaultValue="Кол-во элементов на странице"
+        defaultValue="Post per page"
         options={[
           { value: 5, name: "5" },
           { value: 10, name: "10" },
           { value: 25, name: "25" },
-          { value: -1, name: "Показать все" },
+          { value: -1, name: "Show all" },
         ]}
       />
       <PostList
         remove={removePost}
         posts={sortedAndSearchedPosts}
-        title="Посты про JS"
+        title="New posts"
       />
       <div ref={lastElement} style={{ height: 20, background: "red" }}></div>
       {isPostLoading && (
