@@ -15,7 +15,7 @@ const Navbar = () => {
     <div className="navbar">
       <MyButton onClick={logout}>Exit</MyButton>
       <div className="navbar__links">
-        <Link to="/about">About</Link>
+        <Link style={{marginRight:15}} to="/about">About</Link>
         <Link to="/posts">Posts</Link>
       </div>
     </div>
